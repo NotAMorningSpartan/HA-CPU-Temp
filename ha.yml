@@ -1,0 +1,5 @@
+sensor:
+- platform: template
+  sensors:
+    cpu_temp:
+      value_template: '{{ states("input_number.cpu_temp") | multiply(0.001) | round(1) }}'
